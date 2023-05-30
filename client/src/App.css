@@ -1,0 +1,115 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #fff;
+  background-color: #222;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-container {
+  max-width: 70vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+div.icon svg {
+  width: 100px;
+  margin: 10px;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.home-container p {
+  margin-bottom: 25px;
+}
+.home-container p span {
+  text-decoration: underline;
+}
+
+.home-container .link-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.link-container .register-link {
+  padding: 10px 15px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.link-container .login-link {
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  color: #333;
+}
+
+/* FORM */
+
+.form-container {
+  max-width: 650px;
+  margin: 100px 150px;
+  padding: 30px;
+}
+.form-container h2 {
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+form {
+  /* width: 70vw; */
+  /* margin: 20px; */
+  padding: 30px;
+  background-color: #444;
+}
+
+.input-field {
+  display: flex;
+  /* width: 100%; */
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input-field input {
+  font-family: "Poppins", sans-serif;
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.input-container button {
+  padding: 5px 10px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  /* background-color: #bbb; */
+  border: none;
+}
+/* FORM */
