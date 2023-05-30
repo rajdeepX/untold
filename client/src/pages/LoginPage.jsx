@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [redirect, setRedirect] = useState(false);
 
   const options = {
     method: "POST",
@@ -14,13 +16,22 @@ const LoginPage = () => {
   };
 
   const fetchLoginData = async () => {
-    await fetch("http://localhost:3000/login", options);
+    const response = await fetch("http://localhost:3000/login", options);
+    if (response.ok) {
+      setRedirect(true);
+    } else {
+      alert("Try again");
+    }
   };
 
   const login = (e) => {
     e.preventDefault();
     fetchLoginData();
   };
+
+  if (redirect) {
+    return <Navigate to={"/secrets"} />;
+  }
 
   return (
     <div className="form-container">

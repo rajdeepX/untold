@@ -27,6 +27,7 @@ app.post("/register", async (req, res) => {
             password
         })
         res.json(userDoc)
+        console.log(userDoc.email)
 
     } catch (error) {
         res.status(400).json(error)
@@ -34,6 +35,19 @@ app.post("/register", async (req, res) => {
 })
 
 
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body
+    const userDoc = await User.findOne({ email })
+    try {
+        if (email === userDoc.email && password === userDoc.password) {
+            res.json("OK")
+        } else {
+            res.status(400).json(error)
+        }
+    } catch (error) {
+
+    }
+})
 
 
 
